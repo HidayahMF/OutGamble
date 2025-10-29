@@ -57,17 +57,28 @@ const Home = () => {
         <img
           src={oranghome}
           alt="grid"
-          className="absolute top-75 z-10 w-120"
+          className="absolute top-75 z-10 w-135"
         />
         <img
           src={belakangorang}
           alt=""
-          className="absolute w-120 top-100 right-130 z-1"
+          className="absolute w-132 top-100 right-122 "
         />
       </div>
 
       <div className="flex ml-320 mt-15   w-30">
         <img src={bulathome} alt="" className="" />
+      </div>
+      <div className="flex justify-center py-10">
+        <div className="z-20 flex items-center gap-3 px-4 py-3 backdrop-blur-lg bg-black/10 border border-white rounded-full shadow-lg">
+          <button className="px-8 py-5 rounded-full font-semibold text-white bg-[#05B14F] hover:scale-105 transition-transform duration-200 shadow-md">
+            Mulai Sekarang
+          </button>
+
+          <button className="px-8 py-5 rounded-full font-medium text-white border border-white/50 hover:bg-white/10 hover:scale-105 transition-all duration-200">
+            Pelajari Lebih Lanjut
+          </button>
+        </div>
       </div>
     </section>
   );
