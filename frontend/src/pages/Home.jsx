@@ -70,7 +70,7 @@ const Home = () => {
         <img src={bulathome} alt="" className="" />
       </div>
       <div className="flex justify-center py-10">
-        <div className="z-20 flex items-center gap-3 px-4 py-3 backdrop-blur-lg bg-black/10 border border-white rounded-full shadow-lg">
+        <div className="flex items-center gap-3 px-4 py-3 backdrop-blur-lg bg-black/10 border border-white rounded-full shadow-lg">
           <button className="px-8 py-5 rounded-full font-semibold text-white bg-[#05B14F] hover:scale-105 transition-transform duration-200 shadow-md">
             Mulai Sekarang
           </button>

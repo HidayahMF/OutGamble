@@ -6,7 +6,7 @@ const Statssection = () => {
       <div className="flex justify-center py-10">
         <div className="flex flex-wrap justify-center gap-16 bg-[#1C1C1C] border border-white text-white rounded-[40px] px-50 py-8 shadow-md max-md:gap-8 max-md:px-8 max-md:py-8">
           <div className="flex flex-col items-center">
-            <h2 className="text-[48px] font-extrabold">
+            <h2 className="text-[48px] font-bold">
               10.000<span className="text-[#05B14F]">+</span>
             </h2>
             <p className="text-gray-300 text-[16px] mt-1">
@@ -15,7 +15,7 @@ const Statssection = () => {
           </div>
 
           <div className="flex flex-col items-center">
-            <h2 className="text-[48px] font-extrabold">
+            <h2 className="text-[48px] font-bold">
               5<span className="text-[#05B14F]">+</span>
             </h2>
             <p className="text-gray-300 text-[16px] mt-1">
@@ -24,7 +24,7 @@ const Statssection = () => {
           </div>
 
           <div className="flex flex-col items-center">
-            <h2 className="text-[48px] font-extrabold">
+            <h2 className="text-[48px] font-bold">
               300<span className="text-[#05B14F]">+</span>
             </h2>
             <p className="text-gray-300 text-[16px] mt-1">
@@ -33,7 +33,7 @@ const Statssection = () => {
           </div>
 
           <div className="flex flex-col items-center">
-            <h2 className="text-[48px] font-extrabold">
+            <h2 className="text-[48px] font-bold">
               99<span className="text-[#05B14F]">%</span>
             </h2>
             <p className="text-gray-300 text-[16px] mt-1">
