@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 
 const Statssection = () => {
   return (
-    <section className='bg-black'>
-    <div>asdsda</div>
-    <div></div>
-  </section>
-  )
-}
+    <section className="flex mb-10 bg-black">
+      <div>asdsda</div>
+      <div></div>
+    </section>
+  );
+};
 
-export default Statssection
+export default Statssection;
