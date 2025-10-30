@@ -1,8 +1,11 @@
 import React from "react";
 import Navbar from "./components/Navbar.jsx";
-import Home from "./pages/Home.jsx";
-import StatsSection from "./pages/Statssection.jsx";
-import EducationSection from "./pages/EducationSection.jsx";
+import Home from "./sections/Home.jsx";
+import StatsSection from "./sections/StatsSection.jsx";
+import EducationSection from "./sections/EducationSection.jsx";
+import LayananKami from "./pages/LayananKami.jsx";
+import CommunitySection from "./pages/CommunitySection.jsx";
+import Chatbot from "./sections/Chatbot.jsx";
 
 const App = () => {
   return (
@@ -13,6 +16,9 @@ const App = () => {
       </div>
       <StatsSection />
       <EducationSection />
+      <LayananKami />
+      <CommunitySection />
+      <Chatbot />
     </div>
   );
 };
