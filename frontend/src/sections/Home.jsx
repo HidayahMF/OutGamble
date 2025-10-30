@@ -45,7 +45,7 @@ const Home = () => {
           </p>
         </div>
 
-        <button className="relative md:absolute text-white font-medium mt-0 md:mt-35 px-6 py-3 rounded-full bg-gradient-to-br from-[#005625] to-[#05B14F] text-sm md:text-base">
+        <button className="relative md:absolute text-white font-medium mt-0 md:mt-35 px-6 py-3 rounded-full bg-linear-to-br from-[#005625] to-[#05B14F] text-sm md:text-base">
           Cari Tips & Saran
         </button>
 

@@ -30,7 +30,7 @@ const Chatbot = () => {
 
         <a
           href="#"
-          className="bg-gradient-to-br from-[#005625] to-[#05B14F] text-white font-semibold px-8 py-4 rounded-full text-[18px] w-fit hover:scale-105 transition-transform duration-300"
+          className="bg-linear-to-br from-[#005625] to-[#05B14F] text-white font-semibold px-8 py-4 rounded-full text-[18px] w-fit hover:scale-105 transition-transform duration-300"
         >
           Chat Sekarang
         </a>

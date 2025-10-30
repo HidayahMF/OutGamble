@@ -7,7 +7,7 @@ import tandaserulayanan from "../assets/tandaserulayanan.png";
 
 const LayananKami = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center w-full py-20 bg-gradient-to-br from-[#005625] to-[#05B14F] overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center w-full py-20 bg-linear-to-br from-[#005625] to-[#05B14F] overflow-hidden">
     
       <img
         src={bulatlayanan}

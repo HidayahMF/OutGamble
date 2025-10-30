@@ -50,7 +50,7 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="absolute top-[100%] left-0 w-full bg-black rounded-2xl mt-2 py-5 flex flex-col items-center space-y-4 text-gray-300 font-medium md:hidden shadow-lg animate-fadeIn">
+        <div className="absolute top-full left-0 w-full bg-black rounded-2xl mt-2 py-5 flex flex-col items-center space-y-4 text-gray-300 font-medium md:hidden shadow-lg animate-fadeIn">
           <p className="hover:text-[#05B14F] cursor-pointer">Tentang Kami</p>
           <p className="hover:text-[#05B14F] cursor-pointer">Layanan Kami</p>
           <p className="hover:text-[#05B14F] cursor-pointer">Testimonial</p>

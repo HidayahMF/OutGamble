@@ -106,7 +106,7 @@ const CommunitySection = () => {
           <div className="flex flex-wrap items-center gap-4 mt-6">
             <a
               href="#"
-              className="bg-gradient-to-br text-[20px] from-[#005625] to-[#05B14F] text-white font-semibold px-6 py-3 rounded-full hover:scale-105 transition-transform"
+              className="bg-linear-to-br text-[20px] from-[#005625] to-[#05B14F] text-white font-semibold px-6 py-3 rounded-full hover:scale-105 transition-transform"
             >
               Gabung Sekarang
             </a>
