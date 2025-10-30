@@ -6,6 +6,7 @@ import EducationSection from "./sections/EducationSection.jsx";
 import LayananKami from "./pages/LayananKami.jsx";
 import CommunitySection from "./pages/CommunitySection.jsx";
 import Chatbot from "./sections/Chatbot.jsx";
+import Cerita from "./sections/Cerita.jsx";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <LayananKami />
       <CommunitySection />
       <Chatbot />
+      <Cerita />
     </div>
   );
 };
