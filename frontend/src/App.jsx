@@ -7,6 +7,7 @@ import LayananKami from "./pages/LayananKami.jsx";
 import CommunitySection from "./pages/CommunitySection.jsx";
 import Chatbot from "./sections/Chatbot.jsx";
 import Cerita from "./sections/Cerita.jsx";
+import Menghindari from "./sections/Menghindari.jsx";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
       <CommunitySection />
       <Chatbot />
       <Cerita />
+      <Menghindari />
     </div>
   );
 };
