@@ -18,7 +18,6 @@ const Cerita = () => {
     "Bebas",
   ];
 
-
   const people = [
     {
       img: orang1,
@@ -113,8 +112,7 @@ const Cerita = () => {
           </p>
         </div>
 
-        
-        <div className="relative z-20 flex justify-center items-end gap-16 mt-32">
+        <div className="relative z-20 flex justify-center items-end gap-25 mt-32">
           {people.map((person, i) => (
             <div
               key={i}
@@ -123,12 +121,12 @@ const Cerita = () => {
                 activeIndex === i ? "border-[#07AA4D]" : "border-transparent"
               } hover:border-[#07AA4D] transition-all duration-300 shadow-lg cursor-pointer transform ${
                 i === 0 || i === 6
-                  ? "-translate-y-15"
+                  ? "translate-y-2"
                   : i === 1 || i === 5
-                  ? "translate-y-0"
+                  ? "translate-y-20"
                   : i === 2 || i === 4
-                  ? "translate-y-12"
-                  : "translate-y-17"
+                  ? "translate-y-35"
+                  : "translate-y-40"
               } ${activeIndex === i ? "scale-125" : "scale-100"}`}
             >
               <img
@@ -141,7 +139,6 @@ const Cerita = () => {
         </div>
       </div>
 
-     
       <div className="flex justify-center bg-white py-8 ">
         <div className="relative flex flex-col items-center justify-center bg-white rounded-xl px-8 md:px-16 py-12 shadow-md border border-gray-300 max-w-5xl w-full mx-4">
           <img
@@ -156,7 +153,6 @@ const Cerita = () => {
             className="absolute -right-10 top-1/2 -translate-y-1/2 bg-[#07AA4D] hover:bg-green-600 text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-md transition cursor-pointer"
           />
 
-          
           <h1 className="text-[24px] md:text-[28px] font-bold text-[#07AA4D] mb-1">
             {people[activeIndex].nama}
           </h1>
