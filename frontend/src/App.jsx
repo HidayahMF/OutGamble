@@ -8,6 +8,7 @@ import CommunitySection from "./pages/CommunitySection.jsx";
 import Chatbot from "./sections/Chatbot.jsx";
 import Cerita from "./sections/Cerita.jsx";
 import Menghindari from "./sections/Menghindari.jsx";
+import Berita from "./sections/Berita.jsx";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       <Chatbot />
       <Cerita />
       <Menghindari />
+      <Berita />
     </div>
   );
 };
