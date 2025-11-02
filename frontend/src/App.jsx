@@ -9,6 +9,7 @@ import Chatbot from "./sections/Chatbot.jsx";
 import Cerita from "./sections/Cerita.jsx";
 import Menghindari from "./sections/Menghindari.jsx";
 import Berita from "./sections/Berita.jsx";
+import Statistik from "./sections/Statistik.jsx";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
       <Cerita />
       <Menghindari />
       <Berita />
+      <Statistik/>
     </div>
   );
 };
