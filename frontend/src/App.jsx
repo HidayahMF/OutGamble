@@ -10,6 +10,7 @@ import Cerita from "./sections/Cerita.jsx";
 import Menghindari from "./sections/Menghindari.jsx";
 import Berita from "./sections/Berita.jsx";
 import Statistik from "./sections/Statistik.jsx";
+import EducationVid from "./sections/EducationVid.jsx";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
       <Menghindari />
       <Berita />
       <Statistik/>
+      <EducationVid/>
     </div>
   );
 };
