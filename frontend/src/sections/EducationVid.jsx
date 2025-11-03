@@ -5,7 +5,6 @@ const EducationVid = () => {
   return (
     <section className="flex w-full lg:pt-20 md:pt-20 pt-10 justify-center bg-[#0C0C0C]">
       <div className="container flex flex-col items-center lg:px-0 md:px-5 px-5 gap-3">
-        {/* JUDUL */}
         <h1
           data-aos="fade-down"
           className="font-bold text-white lg:text-[40px] md:text-[30px] text-[25px] text-center"
@@ -16,7 +15,6 @@ const EducationVid = () => {
           Pahami, Hindari, dan Lawan
         </h1>
 
-        {/* DESKRIPSI */}
         <p
           data-aos="fade-down"
           className="font-poppins font-normal text-white text-center lg:text-[14px] md:text-[13px] text-[12px] max-w-3xl"
@@ -27,9 +25,8 @@ const EducationVid = () => {
           berjudi.
         </p>
 
-        {/* GRID VIDEO */}
         <div
-          className="grid grid-cols-3 lg:mt-7 md:mt-5 mt-3 justify-items-center"
+          className=" grid grid-cols-3 lg:mt-7 md:mt-5 mt-3 justify-items-center"
           style={{ columnGap: "30px", rowGap: "40px" }}
         >
           {Video.length > 0 ? (
@@ -50,7 +47,7 @@ const EducationVid = () => {
                   alt={vid.name}
                 />
 
-                <h1 className="font-poppins font-semibold lg:text-[20px] md:text-[18px] text-[16px] mt-2 line-clamp-2">
+                <h1 className="font-poppins font-bold lg:text-[23px] md:text-[18px] text-[16px] mt-2 line-clamp-2">
                   {vid.name}
                 </h1>
 

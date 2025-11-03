@@ -12,6 +12,7 @@ import Berita from "./sections/Berita.jsx";
 import Statistik from "./sections/Statistik.jsx";
 import EducationVid from "./sections/EducationVid.jsx";
 import Footer from "./components/Footer.jsx";
+import Pertanyaan from "./sections/Pertanyaan.jsx";
 
 const App = () => {
   return (
@@ -28,12 +29,12 @@ const App = () => {
       <Cerita />
       <Menghindari />
       <Berita />
-      <Statistik/>
-      <EducationVid/>
+      <Statistik />
+      <EducationVid />
+      <Pertanyaan />
 
-      <Footer/>
+      <Footer />
     </div>
-    
   );
 };
 
