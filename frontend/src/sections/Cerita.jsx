@@ -15,7 +15,7 @@ const Cerita = () => {
         <div className="absolute left-0 top-1/2 w-full -translate-y-1/2 -rotate-3 overflow-hidden bg-white py-1 shadow-md">
           <div
             className="flex animate-scrollX font-extrabold text-black gap-8 items-center whitespace-nowrap"
-            style={{ animation: "scrollX 20s linear infinite" }}
+            style={{ animation: "scrollX 10s linear infinite" }}
           >
             {Array(2)
               .fill(words)
