@@ -98,7 +98,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <hr className="w-full border-[1px] border-white" />
+        <hr className="w-full border border-white" />
         <div className="flex flex-row w-full justify-between">
           <div className="flex flex-col gap-3 lg:w-auto md:w-auto w-full">
             <p className="font-poppins font-medium text-white text-[16px]">

@@ -6,7 +6,6 @@ import gridicons from "../assets/gridicons.png";
 import bintang5 from "../assets/bintang5.png";
 import belakangorang from "../assets/belakangorang.png";
 
-// import semua section dan pages yang ingin muncul setelah hero
 import StatsSection from "./StatsSection.jsx";
 import EducationSection from "./EducationSection.jsx";
 import LayananKami from "../pages/LayananKami.jsx";
@@ -18,12 +17,11 @@ import Berita from "./Berita.jsx";
 import Statistik from "./Statistik.jsx";
 import EducationVid from "./EducationVid.jsx";
 import Pertanyaan from "./Pertanyaan.jsx";
-import Footer from "../components/Footer.jsx";
+
 
 const Home = () => {
   return (
     <main className="bg-white">
-      {/* HERO SECTION */}
       <section className="relative py-8 md:py-16 rounded-b-[50px] md:rounded-b-[150px] overflow-hidden">
         <img
           src={bulathome}
@@ -61,7 +59,7 @@ const Home = () => {
             </p>
           </div>
 
-          <button className="relative md:absolute text-white font-medium mt-0 md:mt-35 px-6 py-3 rounded-full bg-gradient-to-br from-[#005625] to-[#05B14F] text-sm md:text-base">
+          <button className="relative md:absolute text-white font-medium mt-0 md:mt-35 px-6 py-3 rounded-full bg-linear-to-br from-[#005625] to-[#05B14F] text-sm md:text-base">
             Cari Tips & Saran
           </button>
 
@@ -106,7 +104,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* SECTION LANJUTAN */}
       <StatsSection />
       <EducationSection />
       <LayananKami />
@@ -118,9 +115,6 @@ const Home = () => {
       <Statistik />
       <EducationVid />
       <Pertanyaan />
-
-      {/* FOOTER */}
-      <Footer />
     </main>
   );
 };

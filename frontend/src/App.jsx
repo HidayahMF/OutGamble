@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import Home from "./sections/Home.jsx";
 import StatsSection from "./sections/StatsSection.jsx";
@@ -17,11 +17,17 @@ import Pertanyaan from "./sections/Pertanyaan.jsx";
 import OutGambleBot from "./pages/OutGambleBot.jsx";
 
 const App = () => {
-  return (
-    <div className=" text-white min-h-screen flex flex-col">
-      <Navbar />
+  const location = useLocation();
 
-      <div>
+  // Cek apakah sedang di halaman OutGambleBot
+  const hideLayout = location.pathname === "/OutGambleBot";
+
+  return (
+    <div className="text-white min-h-screen flex flex-col">
+      {/* Tampilkan Navbar dan Footer hanya kalau bukan halaman OutGambleBot */}
+      {!hideLayout && <Navbar />}
+
+      <div className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/stats" element={<StatsSection />} />
@@ -39,7 +45,7 @@ const App = () => {
         </Routes>
       </div>
 
-      <Footer />
+      {!hideLayout && <Footer />}
     </div>
   );
 };
