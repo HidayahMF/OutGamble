@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import StatistikChart from "../components/StatistikChart";
+import statistikData from "../data/statistikData";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -10,85 +11,12 @@ import circle_child from "../assets/circle_child.png";
 const Statistik = () => {
   const [selectedYear, setSelectedYear] = useState("2024");
 
-  const dataByYear = {
-    2020: [
-      { name: "Jan", pria: 4, wanita: 7, anak: 3 },
-      { name: "Feb", pria: 5, wanita: 6, anak: 2 },
-      { name: "Mar", pria: 6, wanita: 5, anak: 4 },
-      { name: "Apr", pria: 3, wanita: 8, anak: 3 },
-      { name: "Mei", pria: 4, wanita: 7, anak: 4 },
-      { name: "Jun", pria: 2, wanita: 6, anak: 3 },
-      { name: "Jul", pria: 4, wanita: 5, anak: 5 },
-      { name: "Aug", pria: 5, wanita: 6, anak: 4 },
-      { name: "Sep", pria: 6, wanita: 7, anak: 5 },
-      { name: "Oct", pria: 3, wanita: 8, anak: 4 },
-      { name: "Nov", pria: 2, wanita: 4, anak: 3 },
-      { name: "Dec", pria: 3, wanita: 5, anak: 4 },
-    ],
-    2021: [
-      { name: "Jan", pria: 8, wanita: 6, anak: 5 },
-      { name: "Feb", pria: 7, wanita: 5, anak: 6 },
-      { name: "Mar", pria: 6, wanita: 8, anak: 4 },
-      { name: "Apr", pria: 9, wanita: 7, anak: 6 },
-      { name: "Mei", pria: 8, wanita: 6, anak: 5 },
-      { name: "Jun", pria: 7, wanita: 5, anak: 7 },
-      { name: "Jul", pria: 6, wanita: 6, anak: 6 },
-      { name: "Aug", pria: 8, wanita: 7, anak: 5 },
-      { name: "Sep", pria: 7, wanita: 6, anak: 6 },
-      { name: "Oct", pria: 9, wanita: 7, anak: 5 },
-      { name: "Nov", pria: 6, wanita: 6, anak: 6 },
-      { name: "Dec", pria: 7, wanita: 5, anak: 7 },
-    ],
-    2022: [
-      { name: "Jan", pria: 10, wanita: 12, anak: 11 },
-      { name: "Feb", pria: 6, wanita: 8, anak: 14 },
-      { name: "Mar", pria: 10, wanita: 7, anak: 15 },
-      { name: "Apr", pria: 6, wanita: 13, anak: 13 },
-      { name: "Mei", pria: 9, wanita: 16, anak: 17 },
-      { name: "Jun", pria: 4, wanita: 14, anak: 21 },
-      { name: "Jul", pria: 7, wanita: 13, anak: 25 },
-      { name: "Aug", pria: 4, wanita: 20, anak: 22 },
-      { name: "Sep", pria: 3, wanita: 20, anak: 22 },
-      { name: "Oct", pria: 8, wanita: 17, anak: 19 },
-      { name: "Nov", pria: 3, wanita: 14, anak: 18 },
-      { name: "Dec", pria: 10, wanita: 9, anak: 9 },
-    ],
-    2023: [
-      { name: "Jan", pria: 5, wanita: 10, anak: 9 },
-      { name: "Feb", pria: 6, wanita: 12, anak: 10 },
-      { name: "Mar", pria: 7, wanita: 11, anak: 12 },
-      { name: "Apr", pria: 5, wanita: 13, anak: 11 },
-      { name: "Mei", pria: 6, wanita: 12, anak: 13 },
-      { name: "Jun", pria: 7, wanita: 11, anak: 12 },
-      { name: "Jul", pria: 6, wanita: 13, anak: 13 },
-      { name: "Aug", pria: 8, wanita: 14, anak: 14 },
-      { name: "Sep", pria: 7, wanita: 15, anak: 12 },
-      { name: "Oct", pria: 9, wanita: 13, anak: 13 },
-      { name: "Nov", pria: 8, wanita: 14, anak: 11 },
-      { name: "Dec", pria: 7, wanita: 13, anak: 12 },
-    ],
-    2024: [
-      { name: "Jan", pria: 9, wanita: 11, anak: 10 },
-      { name: "Feb", pria: 10, wanita: 12, anak: 11 },
-      { name: "Mar", pria: 8, wanita: 13, anak: 12 },
-      { name: "Apr", pria: 9, wanita: 14, anak: 13 },
-      { name: "Mei", pria: 11, wanita: 13, anak: 12 },
-      { name: "Jun", pria: 10, wanita: 14, anak: 14 },
-      { name: "Jul", pria: 12, wanita: 15, anak: 13 },
-      { name: "Aug", pria: 11, wanita: 16, anak: 15 },
-      { name: "Sep", pria: 10, wanita: 14, anak: 14 },
-      { name: "Oct", pria: 9, wanita: 13, anak: 12 },
-      { name: "Nov", pria: 8, wanita: 12, anak: 11 },
-      { name: "Dec", pria: 9, wanita: 11, anak: 10 },
-    ],
-  };
-
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
   return (
-    <section className="bg-black flex w-full lg:pt-20 md:pt-20 pt-15 justify-center">
+    <section className="bg-black flex w-full lg:pt-20 md:pt-20 pt-15 pb-24 justify-center"> {/* margin bawah ditambah */}
       <div className="container flex flex-col lg:w-250 md:w-full w-full lg:px-0 md:px-5 px-5 lg:items-center md:items-start gap-3">
         <h1
           data-aos="fade-down"
@@ -98,6 +26,7 @@ const Statistik = () => {
           <span className="text-gradient text-[#07AA4D]">Judi Online</span>{" "}
           Tahunan
         </h1>
+
         <p
           data-aos="fade-down"
           className="font-poppins font-normal text-white lg:text-center lg:text-[14px] md:text-[14px] text-[12px] lg:w-205 md:w-170"
@@ -132,11 +61,7 @@ const Statistik = () => {
                 </div>
 
                 <div className="flex flex-row gap-1.5 items-center">
-                  <img
-                    src={circle_woman}
-                    className="w-2.5 h-auto"
-                    alt="wanita"
-                  />
+                  <img src={circle_woman} className="w-2.5 h-auto" alt="wanita" />
                   <p className="font-poppins font-medium text-white text-[11px]">
                     Wanita
                   </p>
@@ -164,7 +89,7 @@ const Statistik = () => {
             </select>
           </div>
 
-          <StatistikChart data-aos="fade-up" data={dataByYear[selectedYear]} />
+          <StatistikChart data-aos="fade-up" data={statistikData[selectedYear]} />
         </div>
       </div>
     </section>
