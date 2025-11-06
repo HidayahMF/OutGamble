@@ -7,8 +7,7 @@ import icon3 from "../assets/icon3.png";
 const EducationSection = () => {
   return (
     <section className="flex flex-col lg:flex-row w-full bg-black text-white items-center justify-between px-10 py-16 gap-10">
-     
-      <div className="flex-1 flex justify-center">
+      <div data-aos="fade-left" className="flex-1 flex justify-center">
         <img
           src={educationimg}
           alt="Education"
@@ -16,7 +15,7 @@ const EducationSection = () => {
         />
       </div>
 
-      <div className="flex-1 flex flex-col space-y-6">
+      <div data-aos="fade-right" className="flex-1 flex flex-col space-y-6">
         <a
           href="#"
           className="font-semibold text-black bg-[#07AA4D] rounded-2xl px-5 py-2 w-fit"
@@ -33,15 +32,15 @@ const EducationSection = () => {
           Kami percaya bahwa kesadaran digital adalah kunci untuk masa depan
           yang lebih baik. Melalui Out Gamble, kami hadir sebagai platform
           edukasi yang membantu masyarakat memahami bahaya judi online dan
-          memberikan solusi nyata untuk mencegahnya. Kami berkomitmen menciptakan
-          lingkungan digital yang aman, sehat, dan produktif bagi semua kalangan
-          terutama generasi muda.
+          memberikan solusi nyata untuk mencegahnya. Kami berkomitmen
+          menciptakan lingkungan digital yang aman, sehat, dan produktif bagi
+          semua kalangan terutama generasi muda.
         </p>
 
         <div className="flex flex-col space-y-5 mt-5">
           <div className="flex items-start gap-4">
             <img src={icon1} alt="Program Edukasi" className="w-18 h-18" />
-            <div> 
+            <div>
               <h2 className="font-semibold text-lg text-[#07AA4D]">
                 Program Edukasi Digital
               </h2>
