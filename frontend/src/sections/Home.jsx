@@ -18,7 +18,6 @@ import Statistik from "./Statistik.jsx";
 import EducationVid from "./EducationVid.jsx";
 import Pertanyaan from "./Pertanyaan.jsx";
 
-
 const Home = () => {
   return (
     <main className="bg-white">
@@ -65,10 +64,10 @@ const Home = () => {
 
           <div className="flex flex-col items-center md:items-end mr-0 md:mr-5 mt-8 md:mt-20 text-center md:text-right">
             <img src={bintang5} alt="bintang" className="w-28 md:w-40 mb-2" />
-            <p className="font-bold text-2xl md:text-[40px] leading-none">
+            <p className="font-bold text-black text-2xl md:text-[40px] leading-none">
               5+ Tahun
             </p>
-            <p className="font-semibold text-base md:text-[20px]">
+            <p className="font-semibold text-black text-base md:text-[20px]">
               Pengalaman Edukasi Digital
             </p>
           </div>
