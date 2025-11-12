@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
-import { Menu, X } from "lucide-react"; 
+import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="bg-black flex rounded-full justify-center mt-4 mx-10 py-2.5 relative z-50">
-    
       <div className="hidden md:block">
         <ul className="flex space-x-16 font-regular text-gray-300 items-center">
           <li className="my-5 text-[20px] hover:text-[#05B14F] cursor-pointer">
-            Tentang Kami
+            <Link to="/education"> Tentang Kami</Link>
           </li>
           <li className="my-5 text-[20px] hover:text-[#05B14F] cursor-pointer">
             Layanan Kami
@@ -29,9 +29,7 @@ const Navbar = () => {
         </ul>
       </div>
 
-    
       <div className="md:hidden flex justify-between items-center w-full px-6">
-      
         <img src={logo} alt="OutGamble Logo" className="w-[220px] h-[60px]" />
 
         {isOpen ? (

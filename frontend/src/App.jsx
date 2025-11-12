@@ -4,8 +4,8 @@ import Navbar from "./components/Navbar.jsx";
 import Home from "./sections/Home.jsx";
 import StatsSection from "./sections/StatsSection.jsx";
 import EducationSection from "./sections/EducationSection.jsx";
-import LayananKami from "./pages/LayananKami.jsx";
-import CommunitySection from "./pages/CommunitySection.jsx";
+import LayananKami from "./sections/LayananKami.jsx";
+import CommunitySection from "./sections/CommunitySection.jsx";
 import Chatbot from "./sections/Chatbot.jsx";
 import Cerita from "./sections/Cerita.jsx";
 import Menghindari from "./sections/Menghindari.jsx";
@@ -19,15 +19,13 @@ import OutGambleBot from "./pages/OutGambleBot.jsx";
 const App = () => {
   const location = useLocation();
 
-  // Cek apakah sedang di halaman OutGambleBot
   const hideLayout = location.pathname === "/OutGambleBot";
 
   return (
     <div className="text-white min-h-screen flex flex-col">
-      {/* Tampilkan Navbar dan Footer hanya kalau bukan halaman OutGambleBot */}
       {!hideLayout && <Navbar />}
 
-      <div className="flex-grow">
+      <div className="grow">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/stats" element={<StatsSection />} />

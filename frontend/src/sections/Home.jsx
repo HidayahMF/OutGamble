@@ -8,8 +8,8 @@ import belakangorang from "../assets/belakangorang.png";
 
 import StatsSection from "./StatsSection.jsx";
 import EducationSection from "./EducationSection.jsx";
-import LayananKami from "../pages/LayananKami.jsx";
-import CommunitySection from "../pages/CommunitySection.jsx";
+import LayananKami from "./LayananKami.jsx";
+import CommunitySection from "./CommunitySection.jsx";
 import Chatbot from "./Chatbot.jsx";
 import Cerita from "./Cerita.jsx";
 import Menghindari from "./Menghindari.jsx";
