@@ -8,7 +8,7 @@ import rightarrow from "../assets/rightarrow.png";
 
 const CommunitySection = () => {
   return (
-    <section className="bg-black py-16 w-full">
+    <section  className="bg-black py-16 w-full">
       <div className="relative overflow-hidden bg-black py-4">
         <div
           className="flex animate-scrollX font-bold text-white gap-8 justify-center items-center whitespace-nowrap"

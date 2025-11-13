@@ -15,6 +15,7 @@ import EducationVid from "./sections/EducationVid.jsx";
 import Footer from "./components/Footer.jsx";
 import Pertanyaan from "./sections/Pertanyaan.jsx";
 import OutGambleBot from "./pages/OutGambleBot.jsx";
+import Community from "./pages/Community.jsx";
 
 const App = () => {
   const location = useLocation();
@@ -40,6 +41,7 @@ const App = () => {
           <Route path="/educationvid" element={<EducationVid />} />
           <Route path="/pertanyaan" element={<Pertanyaan />} />
           <Route path="/OutGambleBot" element={<OutGambleBot />} />
+          <Route path="/komunitas" element={<Community />} />
         </Routes>
       </div>
 

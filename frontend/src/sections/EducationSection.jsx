@@ -6,7 +6,7 @@ import icon3 from "../assets/icon3.png";
 
 const EducationSection = () => {
   return (
-    <section className="flex flex-col lg:flex-row w-full bg-black text-white items-center justify-between px-10 py-16 gap-10">
+    <section  className="flex flex-col lg:flex-row w-full bg-black text-white items-center justify-between px-10 py-16 gap-10">
       <div data-aos="fade-left" className="flex-1 flex justify-center">
         <img
           src={educationimg}
