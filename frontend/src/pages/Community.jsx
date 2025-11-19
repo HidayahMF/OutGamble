@@ -11,7 +11,9 @@ const Community = () => {
         <p className="font-regular text-center mt-5 text-[20px]">Temukan komunitas yang mendukung kesadaran digital dan membantu masyarakat menjauhi bahaya judi <br /> online. Bergabunglah untuk belajar, berbagi, dan tumbuh bersama dalam lingkungan positif!</p>
       </div>
       </div>
-     <div className="flex flex-col"></div>
+     <div className="flex flex-col">
+      <img src="" alt="" />
+     </div>
       </div>
     </section>
   );
