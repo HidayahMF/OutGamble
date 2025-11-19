@@ -13,6 +13,9 @@ const Community = () => {
       </div>
      <div className="flex flex-col">
       <img src="" alt="" />
+      <div>
+        
+      </div>
      </div>
       </div>
     </section>
