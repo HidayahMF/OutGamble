@@ -18,7 +18,7 @@ const Community = () => {
         </div>
         <div className="flex flex-col">
           <img src={img1komunitas} alt="" />
-          <div></div>
+       
         </div>
       </div>
     </section>
