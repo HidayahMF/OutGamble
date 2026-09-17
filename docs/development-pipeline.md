@@ -1,115 +1,142 @@
-# OutGamble — Development Pipeline
+# 🛡️ OutGamble — Engineering Blueprint
 
-> Code-grounded architecture and delivery guide for the current repository snapshot. Reviewed from `main` at `07e3b9fe5fb3` on 2026-09-17.
+> **Awareness-first web experience:** React routes for education, statistics, community content, and a chatbot-style interface prototype.
 
-The current repository is a React educational website focused on awareness and prevention, with several informational routes and a chatbot interface prototype.
+**Reviewed snapshot:** `main` @ [`07e3b9fe5fb3`](https://github.com/HidayahMF/OutGamble/commit/07e3b9fe5fb3442af9d248dece805a88120cf133) — 2026-09-17
 
-## 1. Frontend architecture
+## ⚡ Project pulse
+
+| Area | Current implementation |
+| --- | --- |
+| UI | React + Vite |
+| Navigation | React Router |
+| Content | Frontend-owned educational pages/assets |
+| Chatbot | Interface prototype only |
+| Backend / DB | Not present in reviewed tree |
+| CI | No `.github/workflows/` found |
+
+## 🧭 Visitor journey
 
 ```mermaid
 flowchart LR
-    U[Visitor] --> A[React App]
-    A --> R[React Router]
-    R --> HOME[Home]
-    R --> EDU[Education]
-    R --> STAT[Statistics]
-    R --> COM[Community]
-    R --> BOT[OutGambleBot UI]
+    V[Visitor] --> HOME[Home]
+    HOME --> EDU[Education]
+    HOME --> STAT[Statistics]
+    HOME --> COM[Community]
+    HOME --> BOT[OutGambleBot UI]
+
+    EDU --> LEARN[Awareness content]
+    STAT --> FACTS[Data / statistics]
+    COM --> SUPPORT[Community information]
+    BOT --> PROTO[Prototype interaction surface]
 ```
 
-## 2. Route and layout flow
+## 🏗️ Frontend architecture
 
 ```mermaid
 flowchart TD
-    PATH[Current Route] --> CHECK{Route = /OutGambleBot?}
-    CHECK -->|Yes| BOT[Render bot page without shared nav]
+    APP[App.jsx] --> ROUTER[React Router]
+    ROUTER --> PUBLIC[Standard pages]
+    ROUTER --> BOT[OutGambleBot]
+
+    PUBLIC --> NAV[Shared navigation]
+    BOT --> SPECIAL[Bot-specific layout]
+
+    BOT -. no live processing pipeline in reviewed source .-> NONE[No AI/backend response]
+```
+
+## 🧩 Route behavior
+
+```mermaid
+flowchart LR
+    PATH[Current path] --> CHECK{OutGambleBot route?}
     CHECK -->|No| NAV[Render shared navigation]
-    NAV --> PAGE[Render selected information page]
+    CHECK -->|Yes| CLEAN[Render bot page without shared nav]
+    NAV --> PAGE[Selected information page]
+    CLEAN --> BOTUI[Chatbot interface]
 ```
 
-## 3. Chatbot status
+## 🗺️ Code ownership map
+
+| Source | Owns |
+| --- | --- |
+| [`frontend/src/App.jsx`](https://github.com/HidayahMF/OutGamble/blob/07e3b9fe5fb3442af9d248dece805a88120cf133/frontend/src/App.jsx) | Routing + shared layout |
+| [`frontend/src/pages/OutGambleBot.jsx`](https://github.com/HidayahMF/OutGamble/blob/07e3b9fe5fb3442af9d248dece805a88120cf133/frontend/src/pages/OutGambleBot.jsx) | Bot-style UI prototype |
+| [`frontend/src/pages/Community.jsx`](https://github.com/HidayahMF/OutGamble/blob/07e3b9fe5fb3442af9d248dece805a88120cf133/frontend/src/pages/Community.jsx) | Community information |
+
+## 🚀 Development → release pipeline
 
 ```mermaid
 flowchart LR
-    INPUT[Text Input] --> UI[Bot Interface]
-    UI -. no message-processing handler in reviewed source .-> NONE[No live reply pipeline]
+    A[Content / UI change] --> B[Trace route + page]
+    B --> C[Implement in React]
+    C --> D[Fact-check claims]
+    D --> E[Accessibility check]
+    E --> F[Lint]
+    F --> G[Production build]
+    G --> H[Direct-route smoke test]
+    H --> I[PR review]
+    I --> J[Static deploy]
 ```
 
-The reviewed `OutGambleBot` component provides presentation elements but does not establish a live AI/message backend.
+### Declared frontend commands
 
-## 4. Runtime ownership
+`npm run dev` → local Vite server  
+`npm run lint` → ESLint  
+`npm run build` → production build
 
-| Layer | Responsibility | Key source |
+## 🛡️ Quality gates
+
+| Gate | Pass condition |
+| --- | --- |
+| Routing | Every page loads correctly on direct refresh |
+| Navigation | Bot route and normal pages show the intended layout |
+| Accessibility | Controls have labels and keyboard support |
+| Responsive UI | Narrow-screen layout remains usable |
+| Content accuracy | Educational/statistical claims are checked before publication |
+| Product honesty | Prototype UI is not described as a live AI service |
+| Build | Production build completes successfully |
+
+## ⚠️ Scope boundary
+
+```mermaid
+flowchart LR
+    CURRENT[Implemented here] --> SITE[Educational React site]
+    CURRENT --> BOTUI[Bot UI prototype]
+
+    FUTURE[Not established by this repo] --> LIVEAI[Live AI replies]
+    FUTURE --> ACCOUNT[Account system]
+    FUTURE --> MOBILE[Android protection functionality]
+```
+
+That separation matters: this repository demonstrates a **web educational experience**, not the full mobile/product architecture that may exist elsewhere.
+
+## ⚠️ Risk radar
+
+| Priority | Finding | Guardrail |
 | --- | --- | --- |
-| React app | Shared routing/layout | `frontend/src/App.jsx` |
-| Bot page | Chatbot interface prototype | `frontend/src/pages/OutGambleBot.jsx` |
-| Community | Community information UI | `frontend/src/pages/Community.jsx` |
-| Assets/data | Educational content and visuals | Frontend source/assets |
+| 🟠 Medium | Bot page looks interactive but has no live message pipeline | Label/document it as a prototype until backend logic exists |
+| 🟠 Medium | Educational/statistical content can become stale | Re-verify claims before major releases |
+| 🟡 Low | No conventional automated tests found | Use route/build/accessibility smoke checks |
+| 🟡 Low | No CI workflow found | Keep release checklist explicit until automation is added |
 
-## 5. Development pipeline
-
-```mermaid
-flowchart LR
-    SRC[Pull source] --> NPM[Install frontend deps]
-    NPM --> DEV[Run Vite]
-    DEV --> CONTENT[Review content + routes]
-    CONTENT --> LINT[Lint]
-    LINT --> BUILD[Production build]
-    BUILD --> REVIEW[Preview + review]
-```
-
-| Directory | Command | Purpose |
-| --- | --- | --- |
-| `frontend` | `npm run dev` | Vite development server |
-| `frontend` | `npm run build` | Production frontend build |
-| `frontend` | `npm run lint` | ESLint |
-
-## 6. Verification gates
-
-- Every route renders directly on page refresh.
-- Shared navigation correctly hides/shows around the bot route.
-- Back/forward navigation works.
-- Forms and controls have accessible labels and keyboard behavior.
-- Mobile/narrow-screen layouts remain usable.
-- External links/assets resolve.
-- Educational claims are independently fact-checked before publication.
-- The bot UI is not described as live AI until a real processing flow exists.
-
-## 7. Release pipeline
-
-```mermaid
-flowchart LR
-    PR[Reviewed PR] --> LINT[Lint]
-    LINT --> BUILD[Production build]
-    BUILD --> PREVIEW[Static preview]
-    PREVIEW --> ROUTES[Direct-route smoke test]
-    ROUTES --> DEPLOY[Static deployment]
-```
-
-No backend, database, or GitHub Actions workflow was present in the reviewed snapshot.
-
-## 8. Current scope vs future capability
+## 🌐 Release smoke path
 
 ```mermaid
 flowchart TD
-    CURRENT[Implemented in this repo] --> SITE[Educational React site]
-    CURRENT --> BOTUI[Chatbot UI prototype]
-    FUTURE[Not established by reviewed source] --> AI[Live AI replies]
-    FUTURE --> ACCOUNT[Account management]
-    FUTURE --> MOBILE[Android protection features]
+    BUILD[Production build] --> HOME[Open home]
+    HOME --> ROUTES[Test every route]
+    ROUTES --> BOT[Test bot layout]
+    BOT --> MOBILE[Mobile viewport]
+    MOBILE --> LINKS[Assets + external links]
+    LINKS --> OK{Everything expected?}
+    OK -->|Yes| RELEASE[Publish]
+    OK -->|No| FIX[Fix and rebuild]
+    FIX --> BUILD
 ```
 
-## 9. Known gaps
+---
 
-1. No backend/database appears in the reviewed tree.
-2. `OutGambleBot` is presentation-only in the inspected implementation.
-3. No conventional automated test suite was found.
-4. CI automation is not present under `.github/workflows/` in this snapshot.
+### Keeping this blueprint accurate
 
-## 10. Source map
-
-- [`frontend/src/App.jsx`](https://github.com/HidayahMF/OutGamble/blob/07e3b9fe5fb3442af9d248dece805a88120cf133/frontend/src/App.jsx)
-- [`frontend/src/pages/OutGambleBot.jsx`](https://github.com/HidayahMF/OutGamble/blob/07e3b9fe5fb3442af9d248dece805a88120cf133/frontend/src/pages/OutGambleBot.jsx)
-- [`frontend/src/pages/Community.jsx`](https://github.com/HidayahMF/OutGamble/blob/07e3b9fe5fb3442af9d248dece805a88120cf133/frontend/src/pages/Community.jsx)
-
-Keep this guide synchronized with routing, factual content, and any future backend/chatbot implementation.
+Update this file whenever routing, content ownership, or the chatbot implementation changes. If a backend/message processor is added later, document the real request/response path instead of extending the prototype diagram by assumption.
